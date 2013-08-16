@@ -3,13 +3,12 @@
  * -- @author xuejia.cxj
  */
 define(function(require, exports, module) {
-	//-- load css files
-	require('boot.css');
 	//-- load js files
-	require.async(['util', 'socketIo', 'bootstrap'], function(){
+	require.async(['boot.css', 'util', 'socketIo', 'bootstrap'], function(){
 		//--dom onload, start the app
 		$(function() {
-			seajs.use('blackbord', function(BlackBord) {
+			seajs.use(['blackbord', 'impress'], function(BlackBord) {
+				impress().init();
 				BlackBord.init();
 			});
 		});
