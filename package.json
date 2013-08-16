@@ -1,0 +1,20 @@
+{
+  "name": "blackbord",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node build/1.0.0/app.js"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-kmc": "~0.1.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "assemble-less": "~0.5.0",
+    "express": "3.3.5",
+    "ejs": "*",
+    "redis": "*"
+  }
+}
