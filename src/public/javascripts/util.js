@@ -8,6 +8,8 @@ define(function(require, exports, module) {
 		return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 	};
 	
+	util.mix = _.mix;
+		
 	/**
 	 * proxy
 	 */
