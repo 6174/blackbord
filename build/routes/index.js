@@ -14,6 +14,7 @@ exports.teacher = function(req, res) {
 	var renderObj = {
 		title: 'teacher page'
 	};
+	
 	res.render('teacher', renderObj);
 };
 

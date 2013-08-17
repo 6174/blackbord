@@ -2,25 +2,16 @@
  * define blackbord module
  */
 define(function(require, exports, module) {
-
-	var BlackBord = {
-		socket: 'socket'
-	};
-
+	var im;
+	var BlackBord = {};
 	BlackBord.init = function() {
-		console.log('init blackbord');
-		testSocket();
+		window.im = im = impress();
+		im.init();
+	}
+	BlackBord.goTo = function(i) {
+		im.goto(i)
 	}
 
-	function testSocket() {
-		var socket = io.connect('/');
-		socket.on('news', function(data) {
-			console.log(data);
-			socket.emit('my other event', {
-				my: 'data'
-			});
-		});
-	}
-
+	BlackBord.init();
 	module.exports = BlackBord;
 });

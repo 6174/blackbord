@@ -25,11 +25,10 @@
 			'boot.css': 'lib/bootstrap/dist/css/bootstrap.css',
 			'blackbord': 'js/blackbord/blackbord.js',
 			'util': 'js/util',
-			'init': 'js/init'
+			'teacher': 'js/teacher/teacher',
+			'student': 'js/student/student',
+			'initTeacher': 'js/teacher/init',
+			'initStudent': 'js/student/init'
 		}
 	});
 })();
-
-seajs.use(['init', 'jquery', 'underscore'], function() {
-	console.log('start app');
-});

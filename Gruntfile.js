@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     /**
      *--clean
      */
-    clean: ["build", "public/javascripts", "public/stylesheets"],
+    clean: ["build", "public/javascripts", "public/stylesheets", "public/javascripts"],
 
     /**
      *--livescripts

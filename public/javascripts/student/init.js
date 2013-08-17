@@ -1,0 +1,1 @@
+/*! blackbord 1.0.0 2013-08-17 */ define(function(a,b,c){a.async(["boot.css","util","socketIo","bootstrap"],function(){$(function(){seajs.use(["blackbord","student","impress"],function(a,b){console.log("haha I am student"),b.init()})})}),c.exports={haha:"haha"}});

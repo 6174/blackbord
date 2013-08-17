@@ -1,11 +1,10 @@
 {
   "name": "blackbord",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "node build/1.0.0/app.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "grunt": "~0.4.1",
     "grunt-kmc": "~0.1.1",
     "grunt-contrib-uglify": "~0.2.0",
@@ -13,8 +12,26 @@
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
     "assemble-less": "~0.5.0",
+    "socket.io": "~0.9.x",
     "express": "3.3.5",
     "ejs": "*",
     "redis": "*"
+  },
+  "description": "blackbord\r =========",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "socket.io": "~0.9.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/6174/blackbord.git"
+  },
+  "keywords": [
+    "sockie.io"
+  ],
+  "author": "chxjia",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/6174/blackbord/issues"
   }
 }
