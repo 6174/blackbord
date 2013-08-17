@@ -3,7 +3,9 @@
 <head>
   <title><%= title %></title>
   <meta charset="utf-8">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel='stylesheet' href='/stylesheets/teacher.css' />
   <script type="text/javascript" src="/lib/seajs/sea.js"></script>
 </head>
 <body>
@@ -38,6 +40,13 @@
 
   </div>
 
+  <!-- Handlers -->
+  <div id="Handlers">
+    <div class="row-fluid">
+      <div id="GoPre" class="handler span6">Pre</div>
+      <div id="GoNext" class="handler span6">Next</div>
+    </div>
+  </div>
   <script type="text/javascript" src="/javascripts/config.js"></script>
   <script>
   seajs.use(['initTeacher', 'jquery', 'underscore'], function() {
