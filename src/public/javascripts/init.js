@@ -8,8 +8,12 @@ define(function(require, exports, module) {
 		//--dom onload, start the app
 		$(function() {
 			seajs.use(['blackbord', 'impress'], function(BlackBord) {
-				impress().init();
-				BlackBord.init();
+				var im = impress();
+				console.log(im.init(), im);
+				setTimeout(function(){
+					im.next();
+				}, 2000);
+				// BlackBord.init();
 			});
 		});
 	});

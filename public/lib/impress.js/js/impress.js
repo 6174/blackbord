@@ -174,12 +174,12 @@
                            
                           // and `classList` and `dataset` APIs
                            ( body.classList ) &&
-                           ( body.dataset ) &&
+                           ( body.dataset ) ;//&&
                            
                           // but some mobile devices need to be blacklisted,
                           // because their CSS 3D support or hardware is not
                           // good enough to run impress.js properly, sorry...
-                           ( ua.search(/(iphone)|(ipod)|(android)/) === -1 );
+                           // ( ua.search(/(iphone)|(ipod)|(android)/) === -1 );
     
     if (!impressSupported) {
         // we can't be sure that `classList` is supported
@@ -201,7 +201,7 @@
         width: 1024,
         height: 768,
         maxScale: 1,
-        minScale: 0,
+        minScale: 0.9,
         
         perspective: 1000,
         
@@ -330,17 +330,16 @@
         
         // `init` API function that initializes (and runs) the presentation.
         var init = function () {
-            if (initialized) { return; }
+            if (initialized) { return 'haha'; }
             
             // First we set up the viewport for mobile devices.
             // For some reason iPad goes nuts when it is not done properly.
-            var meta = $("meta[name='viewport']") || document.createElement("meta");
-            meta.content = "width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no";
-            if (meta.parentNode !== document.head) {
-                meta.name = 'viewport';
-                document.head.appendChild(meta);
-            }
-            
+            // var meta = $("meta[name='viewport']") || document.createElement("meta");
+            // meta.content = "width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no";
+            // if (meta.parentNode !== document.head) {
+            //     meta.name = 'viewport';
+            //     document.head.appendChild(meta);
+            // }
             // initialize configuration object
             var rootData = root.dataset;
             config = {
