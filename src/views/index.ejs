@@ -9,37 +9,7 @@
   <script type="text/javascript" src="/lib/seajs/sea.js"></script>
 </head>
 <body>
-  <style>
-    body{
-      padding: 2px;
-    }
-    #impress{
-      width: 100%;
-      height: 100%;
-    }
-    .sliderwe{
-      width: 320px;
-      height: 640px;
-      border: solid 1px gray;
-    }
-  </style>
-
-
-  <!-- impress  Demo container-->
-  <div id="impress">
-
-    <div class="step slide" data-x="0" data-y="0">
-      <h1><%= title %></h1>
-      <p> Welcome to <%= title %></p>
-    </div>
-
-    <div class="step slide" data-x="600" data-y="0">
-      <h1>wocha wozai dier</h1>
-    </div>
-
-  </div>
-
-
+  <% include ppt %>
   <script type="text/javascript" src="/javascripts/config.js"></script>
   <script>
   seajs.use(['initStudent', 'jquery', 'underscore'], function() {
