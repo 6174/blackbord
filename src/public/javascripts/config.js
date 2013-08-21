@@ -18,6 +18,8 @@
 		alias: {
 			'jquery': 'lib/jquery/jquery.js',
 			'underscore': 'lib/underscore/underscore',
+			'snippet': 'lib/snippet/jquery.snippet.js',
+			'snippet.css': 'lib/snippet/jquery.snippet.css',
 			'impress': 'lib/impress.js/js/impress.js',
 			'impress.css': 'lib/impress.js/css/impress.demo.css',
 			'socketIo': 'lib/socket.io/socket.io.js',

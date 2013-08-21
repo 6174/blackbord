@@ -1,0 +1,53 @@
+<style>
+  body{
+    padding: 2px;
+  }
+  #impress{
+    width: 100%;
+    height: 100%;
+  }
+  .slide{
+  }
+  .jscode{
+    width: 320px;
+    min-height: 400px;
+  }
+
+</style>
+<!-- impress  Demo container-->
+<div id="impress">
+
+  <div class="step slide" data-x="0" data-y="0">
+    <h1>
+      <%= title %></h1>
+    <p>
+      Welcome to
+      <%= title %></p>
+  </div>
+
+  <div class="step slide jscode" data-x="600" data-y="0">
+    <h1>JavaScript code</h1>
+<pre class="js">
+$(document).ready(function(){
+    $("pre#dynamic").snippet("php",{style:"navy",clipboard:"js/ZeroClipboard.swf",showNum:false});
+        // Highlights a snippet of PHP code with the "navy" style
+        // Hides line numbers
+    $("pre#dynamic").click(function(){
+        $(this).snippet({style:"vampire",transparent:true,showNum:true});
+        // Changes existing snippet's style to "vampire"
+        // Changes the background to transparent
+        // Shows line numbers
+    });
+});
+</pre>
+  </div>
+
+  <div class="step slide" data-x="1400" data-y="300">
+    <h1></h1>
+  </div>
+
+  <div class="step slide" data-x="0" data-y="-600">
+    <h1>.....  example</h1>
+  </div>
+
+</div>
