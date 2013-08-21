@@ -10,6 +10,8 @@ define(function(require, exports, module) {
 			seajs.use(['blackbord', 'teacher', 'impress'], function(BlackBord, Teacher) {
 				console.log('haha I am teacher');
 				Teacher.init();
+
+
 				//--syntax-highlight
 				$("pre.js").snippet("javascript", {
 					style: "darkness",

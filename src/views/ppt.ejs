@@ -12,6 +12,20 @@
     width: 320px;
     min-height: 400px;
   }
+  .jscode .codeContainer{
+    max-height: 490px;
+    position: relative;
+    overflow: scroll;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #000;
+    -moz-box-shadow: 2px 2px 5px #000;
+    -webkit-box-shadow: 2px 2px 5px #000;
+  }
+  .jscode .codeContainer pre{
+    width: 300%;
+  }
 
 </style>
 <!-- impress  Demo container-->
@@ -27,19 +41,49 @@
 
   <div class="step slide jscode" data-x="600" data-y="0">
     <h1>JavaScript code</h1>
+    <div class="codeContainer">
 <pre class="js">
-$(document).ready(function(){
-    $("pre#dynamic").snippet("php",{style:"navy",clipboard:"js/ZeroClipboard.swf",showNum:false});
-        // Highlights a snippet of PHP code with the "navy" style
-        // Hides line numbers
-    $("pre#dynamic").click(function(){
-        $(this).snippet({style:"vampire",transparent:true,showNum:true});
-        // Changes existing snippet's style to "vampire"
-        // Changes the background to transparent
-        // Shows line numbers
+$(document).ready(function() {
+  $("pre#dynamic").snippet("php", {
+    style: "navy",
+    clipboard: "js/ZeroClipboard.swf",
+    showNum: false
+  });
+  // Highlights a snippet of PHP code with the "navy" style
+  // Hides line numbers
+  $("pre#dynamic").click(function() {
+    $(this).snippet({
+      style: "vampire",
+      transparent: true,
+      showNum: true
     });
+    // Changes existing snippet's style to "vampire"
+    // Changes the background to transparent
+    // Shows line numbers
+  });
+});
+
+$(document).ready(function() {
+  $("pre#dynamic").snippet("php", {
+    style: "navy",
+    clipboard: "js/ZeroClipboard.swf",
+    showNum: false
+  });
+  // Highlights a snippet of PHP code with the "navy" style
+  // Hides line numbers
+  $("pre#dynamic").click(function() {
+    $(this).snippet({
+      style: "vampire",
+      transparent: true,
+      showNum: true
+    });
+    // Changes existing snippet's style to "vampire"
+    // Changes the background to transparent
+    // Shows line numbers
+  });
 });
 </pre>
+    </div>
   </div>
 
   <div class="step slide" data-x="1400" data-y="300">
