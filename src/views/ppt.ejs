@@ -40,29 +40,9 @@
   </div>
 
   <div class="step slide jscode" data-x="600" data-y="0">
-    <h1>JavaScript code</h1>
+    <h1>Group 1</h1>
     <div class="codeContainer">
 <pre class="js">
-$(document).ready(function() {
-  $("pre#dynamic").snippet("php", {
-    style: "navy",
-    clipboard: "js/ZeroClipboard.swf",
-    showNum: false
-  });
-  // Highlights a snippet of PHP code with the "navy" style
-  // Hides line numbers
-  $("pre#dynamic").click(function() {
-    $(this).snippet({
-      style: "vampire",
-      transparent: true,
-      showNum: true
-    });
-    // Changes existing snippet's style to "vampire"
-    // Changes the background to transparent
-    // Shows line numbers
-  });
-});
-
 $(document).ready(function() {
   $("pre#dynamic").snippet("php", {
     style: "navy",
@@ -86,12 +66,97 @@ $(document).ready(function() {
     </div>
   </div>
 
-  <div class="step slide" data-x="1400" data-y="300">
-    <h1></h1>
+  <div class="step slide jscode" data-x="1400" data-y="0">
+    <h1>Group 2</h1>
+    <div class="codeContainer">
+<pre class="js">
+/**
+ * 切换地址的响应
+ * 单独提出，因为在创建地址时会额外的调用
+ */
+bindSwitchAddr: function() {
+    var addrList = DOM.query('li.addr-data', this.addrRoot),
+        self = this;
+    S.each(addrList, function(item) {
+        Event.detach(item, 'click');
+        Event.on(item, 'click', function(e) {
+            //点击的非当前地址
+            var curAddr = self.curAddr;
+            if (curAddr != item) {
+                DOM.removeClass(curAddr, 'cur-addr');
+                self.curAddr = item;
+                curAddr = self.curAddr;
+                DOM.addClass(curAddr, 'cur-addr');
+                var checkbox = DOM.get('input', curAddr);
+                DOM.attr(checkbox, 'checked', 'checked');
+                //更新option中的当前addrdata
+                var curAddrId = DOM.attr(curAddr, 'data-addrId');
+                self.curAddrData = self.addrMap[curAddrId];
+            }
+        });
+    });
+},
+</pre>
+    </div>
   </div>
 
-  <div class="step slide" data-x="0" data-y="-600">
-    <h1>.....  example</h1>
+  <div class="step slide jscode" data-x="2200" data-y="0">
+    <h1>Group 3</h1>
+    <div class="codeContainer">
+<pre class="js">
+/**
+ *--copy
+ */
+copy: {
+  main: {
+    files: [{
+      expand: true,
+      flatten: true,
+      cwd: 'src/routes/',
+      src: '*',
+      dest: 'build/routes/',
+      filter: 'isFile'
+    }, {
+      expand: true,
+      flatten: true,
+      cwd: 'src/views/',
+      src: '*',
+      dest: 'build/views/',
+      filter: 'isFile'
+    }, {
+      expand: true,
+      flatten: true,
+      cwd: 'src/',
+      src: '*',
+      dest: 'build/',
+      filter: 'isFile'
+    }]
+  }
+}
+</pre>
+    </div>
+  </div>
+
+
+   <div class="step slide jscode" data-x="3000" data-y="0">
+    <h1>Group 3</h1>
+    <div class="codeContainer">
+<pre class="js">
+  //--load uglify 
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  //--load assemble-less
+  grunt.loadNpmTasks('assemble-less');
+  //--load grunt-livescript
+  grunt.loadNpmTasks('grunt-livescript');
+  //--load copy
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  //--load clean
+  grunt.loadNpmTasks('grunt-contrib-clean');
+
+  // Default task(s).
+  grunt.registerTask('default', ['clean', 'uglify', 'less', 'copy']);
+</pre>
+    </div>
   </div>
 
 </div>

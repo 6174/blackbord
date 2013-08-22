@@ -1,1 +1,1 @@
-/*! blackbord 1.0.0 2013-08-21 */ define(function(a,b,c){var d,e={};e.init=function(){window.im=d=impress(),d.init()},e.goTo=function(a){d.goto(a)},e.next=function(){d.next()},e.prev=function(){d.prev()},e.currentStep=function(){return d.activeStep()},e.init(),c.exports=e});
+/*! blackbord 1.0.0 2013-08-22 */ define(function(a,b,c){var d,e={};e.init=function(){window.im=d=impress(),d.init()},e.goTo=function(a){d.goto(a)},e.next=function(){d.next()},e.prev=function(){d.prev()},e.currentStep=function(){return d.activeStep()},e.init(),c.exports=e});
