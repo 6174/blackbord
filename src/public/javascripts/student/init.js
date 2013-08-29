@@ -8,6 +8,7 @@ define(function(require, exports, module) {
 		//--dom onload, start the app
 		$(function() {
 			seajs.use(['blackbord', 'student', 'impress'], function(BlackBord, Student) {
+				$('body').show();
 				console.log('haha I am student');
 				Student.init();
 
