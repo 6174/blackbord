@@ -28,9 +28,9 @@ define(function(require, exports, module) {
 			console.log('identifyFaild');
 		});
 
-		socket.on('goto', function(i){
-			console.log('goto Called');
-			blackbord.goTo(i);
+		socket.on('goto', function(indices){
+			console.log('goto Called', indices);
+			blackbord.goTo(indices);
 		});
 	};
 	module.exports = student;

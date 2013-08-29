@@ -22,6 +22,8 @@
 			'snippet.css': 'lib/snippet/jquery.snippet.css',
 			'impress': 'lib/impress.js/js/impress.js',
 			'impress.css': 'lib/impress.js/css/impress.demo.css',
+			'reveal': 'lib/reveal/js/reveal.js',
+			'reveal.css': 'lib/reveal/css/reveal.css',
 			'socketIo': 'lib/socket.io/socket.io.js',
 			'bootstrap': 'lib/bootstrap/js/bootstrap.js',
 			'boot.css': 'lib/bootstrap/css/bootstrap.css',

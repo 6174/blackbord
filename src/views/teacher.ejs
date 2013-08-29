@@ -12,15 +12,9 @@
 <body>
   <% include ppt %>
   <!-- Handlers -->
-  <div id="Handlers">
-    <div class="row-fluid">
-      <div id="GoPre" class="handler span6">Pre</div>
-      <div id="GoNext" class="handler span6">Next</div>
-    </div>
-  </div>
   <script type="text/javascript" src="/javascripts/config.js"></script>
   <script>
-  seajs.use(['initTeacher', 'jquery', 'underscore'], function() {
+  seajs.use(['initTeacher', 'jquery', 'underscore', 'reveal'], function() {
     console.log('start app');
   });
   </script>

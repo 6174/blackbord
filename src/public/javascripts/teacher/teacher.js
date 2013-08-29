@@ -13,62 +13,62 @@ define(function(require, exports, module) {
 		goNextEl: $('#GoNext')
 	}
 
-	teacher.init = function(){
+	teacher.init = function() {
 		var self = this;
 		self._socket = socket = io.connect('/');
 
 		//--connectioned handler
-		socket.on('connect', function(){
+		socket.on('connect', function() {
 			console.log('connect-success');
 			socket.emit('joinRoom', '123456');
 		});
 
-		socket.on('news', function(news){
+		socket.on('news', function(news) {
 			console.log('----------', news);
 		});
 
 		//--joinedRoom Handler
-		socket.on('joinedRoom', function(){
+		socket.on('joinedRoom', function() {
 			console.log('joinRoom success');
 			socket.emit('identify', 'teacher', '123456');
 		});
 
 		//--identifySuccess handler
-		socket.on('identifySuccess', function(){
+		socket.on('identifySuccess', function() {
 			console.log('identifySuccess');
 		});
 
 		//--indentifyFaild handler
-		socket.on('identifyFaild', function(){
+		socket.on('identifyFaild', function() {
 			console.log('identifyFaild');
 		});
 	};
 
-	teacher.goTo = function(i) {
-		if(!socket) return;
-		socket.emit('goto', i);
+	teacher.goTo = function(indices) {
+		if (!socket) return;
+		socket.emit('goto', indices);
 		return true;
 	}
 
-	teacher.syn = function(){
+	teacher.syn = function(indices) {
 		var self = this;
-		console.log("bsyn current step: " + blackbord.currentStep());
-		self.goTo(blackbord.currentStep());
+		console.log(indices);
+		self.goTo(indices);
 	}
 
-	teacher.bindNavEvent = function(){
+	teacher.bindNavEvent = function() {
 		var self = this;
-		var prevEl = self.els.goPreEl;
-		var nextEl = self.els.goNextEl;
-
-		prevEl.bind('click', function(){
-			blackbord.prev();
-			self.syn();
+		Reveal.addEventListener('slidechanged', function(event) {
+			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			self.syn(Reveal.getIndices());
 		});
-
-		nextEl.bind('click', function(){
-			blackbord.next();
-			self.syn();
+		Reveal.addEventListener('fragmentshown', function(event) {
+			// event.fragment = the fragment DOM element
+			self.syn(Reveal.getIndices());
+		});
+		Reveal.addEventListener('fragmenthidden', function(event) {
+			// event.fragment = the fragment DOM element
+			self.syn(Reveal.getIndices());
 		});
 	}
 
